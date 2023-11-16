@@ -58,7 +58,7 @@ class CCKNN(ProcessedData):
             deletelist=[]
             for i in range(len(pass_feature1)):
                 distance = np.sum(np.power((allfeature - pass_feature1[i]), 2), axis=1)
-                index = np.argsort(distance)[:15]
+                index = np.argsort(distance)[:5]
                 n = 0
                 for j in index:
                     if label[j] == 0:
